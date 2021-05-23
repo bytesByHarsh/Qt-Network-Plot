@@ -26,6 +26,7 @@ void MyServer::incomingConnection(qintptr socketDescriptor)
     MyThread *thread = new MyThread(socketDescriptor,this);
 
     connect(thread,SIGNAL(finished()),thread,SLOT(deleteLater()));
+    connect(thread,SIGNAL(newDataRecieved(QByteArray)),this,SIGNAL(newDataRecieved(QByteArray)));
 
     thread->start();
 }

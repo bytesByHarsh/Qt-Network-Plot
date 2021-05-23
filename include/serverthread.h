@@ -11,6 +11,9 @@ class ServerThread : public QThread
 public:
     ServerThread(QObject *parent=0);
     void run();
+
+signals:
+    void newDataRecieved(QByteArray);
 };
 
 #endif // SERVERTHREAD_H

@@ -27,8 +27,9 @@ void MyThread::readyRead()
 {
     QByteArray Data = socket->readAll();
 
-    qDebug()<<socketDescriptor <<" Data in:"<< Data;
+//    qDebug()<<socketDescriptor <<" Data in:"<< Data;
 
+    emit newDataRecieved(Data);
 }
 
 void MyThread::disconnected()

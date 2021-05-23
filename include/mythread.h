@@ -25,7 +25,7 @@ public slots:
 
 signals:
     void error(QTcpSocket::SocketError socketerror);
-    void newDataRecieved(QByteArray Data);
+    void newDataRecieved(QByteArray);
 };
 
 #endif // MYTHREAD_H

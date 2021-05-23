@@ -3,6 +3,8 @@
 
 #include <QMainWindow>
 #include <QVector>
+#include <QDebug>
+#include "qcustomplot.h"
 #include "serverthread.h"
 
 QT_BEGIN_NAMESPACE
@@ -28,5 +30,8 @@ private slots:
 
 private:
     Ui::NetworkPlot *ui;
+
+public slots:
+    void parseData(QByteArray);
 };
 #endif // NETWORKPLOT_H

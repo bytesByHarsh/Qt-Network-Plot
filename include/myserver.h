@@ -14,6 +14,9 @@ public:
 
 protected:
     void incomingConnection(qintptr socketDescriptor);
+
+signals:
+    void newDataRecieved(QByteArray);
 };
 
 #endif // MYSERVER_H
