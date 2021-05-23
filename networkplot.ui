@@ -32,6 +32,206 @@
      <string>Network Plot</string>
     </property>
    </widget>
+   <widget class="QCustomPlot" name="customPlot" native="true">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>60</y>
+      <width>751</width>
+      <height>481</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="plotButton">
+    <property name="geometry">
+     <rect>
+      <x>770</x>
+      <y>270</y>
+      <width>93</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Plot</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="clearButton">
+    <property name="geometry">
+     <rect>
+      <x>910</x>
+      <y>270</y>
+      <width>93</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Clear</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton">
+    <property name="geometry">
+     <rect>
+      <x>920</x>
+      <y>490</y>
+      <width>93</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Close</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>780</x>
+      <y>350</y>
+      <width>71</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Line Style</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>940</x>
+      <y>350</y>
+      <width>91</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Scatter Style</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="lineStyleComboBox">
+    <property name="geometry">
+     <rect>
+      <x>780</x>
+      <y>380</y>
+      <width>73</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <item>
+     <property name="text">
+      <string>None</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Line</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Step Left</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Step Right</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Step Center</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Impulse</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QComboBox" name="plotTypeComboBox">
+    <property name="geometry">
+     <rect>
+      <x>940</x>
+      <y>380</y>
+      <width>73</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <item>
+     <property name="text">
+      <string>None</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Dot</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Cross</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Plus</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Circle</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Disc</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Square</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Diamond</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Star</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Triangle</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Triangle Inverted</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Cross Square</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Plus Circle</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Peace</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Cross</string>
+     </property>
+    </item>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
@@ -45,6 +245,31 @@
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>QCustomPlot</class>
+   <extends>QWidget</extends>
+   <header>qcustomplot.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
  <resources/>
- <connections/>
+ <connections>
+  <connection>
+   <sender>pushButton</sender>
+   <signal>clicked()</signal>
+   <receiver>NetworkPlot</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>960</x>
+     <y>531</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>963</x>
+     <y>554</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
 </ui>

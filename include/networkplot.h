@@ -2,6 +2,7 @@
 #define NETWORKPLOT_H
 
 #include <QMainWindow>
+#include <QVector>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class NetworkPlot; }
@@ -14,6 +15,15 @@ class NetworkPlot : public QMainWindow
 public:
     NetworkPlot(QWidget *parent = nullptr);
     ~NetworkPlot();
+
+private slots:
+    void on_plotButton_clicked();
+
+    void on_clearButton_clicked();
+
+    void on_lineStyleComboBox_currentIndexChanged(int index);
+
+    void on_plotTypeComboBox_currentIndexChanged(int index);
 
 private:
     Ui::NetworkPlot *ui;
