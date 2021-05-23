@@ -3,6 +3,7 @@
 
 #include <QMainWindow>
 #include <QVector>
+#include "serverthread.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class NetworkPlot; }

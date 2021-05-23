@@ -20,6 +20,10 @@ NetworkPlot::NetworkPlot(QWidget *parent)
     ui->plotTypeComboBox->setCurrentIndex(4);
     ui->lineStyleComboBox->setCurrentIndex(1);
 
+    ServerThread *thread = new ServerThread(this);
+
+    thread->start();
+
 
 }
 
